@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+ {% block body %}
+
+
+    <div class="container my-3">
+        <h2>
+           update your Data
+        </h2>
+
+  <form action="/update/{{lalit.sno}}" method="POST">
+    <!-- Title Field -->
+    <div class="mb-3">
+      <label for="title" class="form-label">Myapp Title</label>
+       <input type="text" class="form-control"  name="title" id="title" value="{{lalit.title}}" aria-descrobed="endfor">
+    
+ </div>
+    <!-- Description Field -->
+    <div class="mb-3">
+      <label for="desc" class="form-label">Myapp Description</label>
+    <input type="text" class="form-control" value="{{lalit.desc}}" name="desc" id="desc">
+      
+      </div> 
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-outline-dark btn-outline">update</button>
+  </form>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+{% endblock body %}
